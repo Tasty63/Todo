@@ -1,0 +1,12 @@
+.todo-form {
+  display: flex;
+  align-items: center;
+
+  .todo-form__button {
+    padding: 0;
+
+    .todo-form__icon {
+      font-size: 56px;
+    }
+  }
+}

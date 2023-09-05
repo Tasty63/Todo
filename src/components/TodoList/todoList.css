@@ -1,0 +1,5 @@
+.todo-list {
+  overflow: auto;
+  overflow-y: scroll;
+  max-height: 400px;
+}

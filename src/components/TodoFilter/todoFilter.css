@@ -1,0 +1,14 @@
+.filter {
+  display: flex;
+  column-gap: 10px;
+
+  .chip {
+    padding: 5px;
+    border-radius: 0;
+    border: 1px solid transparent;
+  }
+  
+  .chip__active {
+    border: 1px solid black;
+  }
+}
