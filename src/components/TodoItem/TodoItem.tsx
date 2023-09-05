@@ -9,7 +9,7 @@ const TodoItem = ({ todoInfo, toggleCompleted, deleteTodo }: TodoItemProps) => {
 
   return (
     <ListItem className="todo-item">
-      <ListItemButton role={undefined} onClick={toggleItemCompleted}>
+      <ListItemButton onClick={toggleItemCompleted}>
         <ListItemIcon>
           <Checkbox
             edge="start"
@@ -17,10 +17,11 @@ const TodoItem = ({ todoInfo, toggleCompleted, deleteTodo }: TodoItemProps) => {
           />
         </ListItemIcon>
         <ListItemText
+          data-testid="todo-text"
           primary={todoInfo.text}
           style={{ textDecoration: todoInfo.isCompleted ? 'line-through' : 'none' }}
         />
-        <ListItemIcon onClick={deleteTodoItem}>
+        <ListItemIcon onClick={deleteTodoItem} data-testid="todo-delete">
           <CloseIcon />
         </ListItemIcon>
       </ListItemButton>

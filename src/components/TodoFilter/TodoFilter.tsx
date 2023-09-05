@@ -10,7 +10,7 @@ const TodoFilter = ({ filter, setFilter }: TodoFilterProps) => {
   }
 
   return (
-    <div className="filter">
+    <div className="filter" data-testid="todo-filter">
       <Chip
         className={setClassName(FilterType.All, filter)}
         label="All"

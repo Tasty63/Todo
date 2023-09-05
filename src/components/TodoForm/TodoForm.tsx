@@ -21,7 +21,7 @@ const TodoForm = ({ addTodo }: TodoFormProps) => {
     setText(event.target.value)
 
   return (
-    <form className="todo-form" onSubmit={onTodoAdd}>
+    <form className="todo-form" onSubmit={onTodoAdd} data-testid="todo-form">
       <TextField
         fullWidth
         id="todo"
@@ -32,6 +32,7 @@ const TodoForm = ({ addTodo }: TodoFormProps) => {
         onChange={onTextChange}
       />
       <IconButton
+        data-testid="add-button"
         className="todo-form__button"
         aria-label="add"
         type="submit"

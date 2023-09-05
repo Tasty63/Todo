@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import TodoList from './components/TodoList/TodoList'
-
-import './app.css'
 import { AddTodoFn, DeleteTodoFn, FilterType, GetFilteredTodosFn, TodoItemType, ToggleCompleteFn } from './config/types';
-import { testTodos } from './config/constants';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoFilter from './components/TodoFilter/TodoFilter';
 import Button from '@mui/material/Button';
+import './app.css'
 
 const App = () => {
-  const [todos, setTodos] = useState<TodoItemType[]>(testTodos);
+  const [todos, setTodos] = useState<TodoItemType[]>([]);
   const [filter, setFilter] = useState<FilterType>(FilterType.All);
 
   const addTodo: AddTodoFn = (text) => {
