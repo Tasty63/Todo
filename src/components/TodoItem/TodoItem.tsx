@@ -2,8 +2,6 @@ import { Checkbox, ListItem, ListItemButton, ListItemIcon, ListItemText } from "
 import { TodoItemProps } from "../../config/types";
 import CloseIcon from '@mui/icons-material/Close';
 
-import './todoItem.css';
-
 const TodoItem = ({ todoInfo, toggleCompleted, deleteTodo }: TodoItemProps) => {
 
   const toggleItemCompleted = () => toggleCompleted(todoInfo.id);

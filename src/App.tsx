@@ -6,6 +6,7 @@ import { AddTodoFn, DeleteTodoFn, FilterType, GetFilteredTodosFn, TodoItemType, 
 import { testTodos } from './config/constants';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoFilter from './components/TodoFilter/TodoFilter';
+import Button from '@mui/material/Button';
 
 const App = () => {
   const [todos, setTodos] = useState<TodoItemType[]>(testTodos);
@@ -22,6 +23,10 @@ const App = () => {
   const deleteTodo: DeleteTodoFn = (id) => {
     setTodos((todos) => todos.filter((todo) => todo.id !== id));
   };
+
+  const clearCompleted = () => {
+    setTodos((todos) => todos.filter(todo => todo.isCompleted === false))
+  }
 
   const toggleComplete: ToggleCompleteFn = (id) => {
     setTodos((todos) => (
@@ -63,6 +68,7 @@ const App = () => {
         <div className="todo__footer">
           <div className="todo__count">{remainTodos} items left</div>
           <TodoFilter filter={filter} setFilter={setFilter} />
+          <Button onClick={clearCompleted}>Clear completed</Button>
         </div>
       </div>
 
