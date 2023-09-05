@@ -6,3 +6,6 @@
 # Запуск тестов
 + ```npm test```
 + ```npm run coverage```
+
+# Деплой
+## https://tasty63-todo.netlify.app/
