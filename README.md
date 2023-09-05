@@ -1,5 +1,5 @@
 # Запуск приложения
-1. ```https://github.com/Tasty63/Todo.git```
+1. ```git clone https://github.com/Tasty63/Todo.git```
 2. ```cd todo```
 3. ```npm i && npm run start```
 
